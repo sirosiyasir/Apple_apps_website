@@ -1,159 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- FAVICON -->
+    <link rel="icon" href="images/favicon.ico" />
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <!-- GOOGLE FONTS -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- FONTAWESOME -->
+    <script
+      src="https://kit.fontawesome.com/ff84dc085c.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
-  <!-- FAVICON -->
-  <link rel="icon" href="images/favicon.ico" />
-  <!-- CSS only -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
-  <link rel="stylesheet" href="style.css" />
-  <!-- GOOGLE FONTS -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
-  <!-- FONTAWESOME -->
-  <script src="https://kit.fontawesome.com/ff84dc085c.js" crossorigin="anonymous"></script>
-</head>
-
-<body>
-  <!-- NAVBAR -->
-  <nav class="navigation container">
-    <h1 id="brand">Calculator</h1>
-    <div id="all-links">
-      <div id="links">
+  <body>
+    <!-- MOBİLE NAVBAR MENU ACTİVE -->
+    <div class="container mobile-navbar" id="mobile-navbar">
+      <div class="mobile-links">
         <a href="#">Contact Us</a>
+        <hr />
         <a href="#">Download</a>
+        <hr />
         <a href="#">Other Apps</a>
       </div>
-      <div id="menu">
-        <p>MENU</p>
-        <i class="fa-solid fa-bars menu-icon"></i>
-        <!-- <i class="fa fa-caret-down"></i> -->
-        <div id="menu-links">
+    </div>
+    <!-- NAVBAR -->
+    <nav class="navigation container">
+      <h1 id="brand">Calculator</h1>
+      <div id="all-links">
+        <div id="links">
           <a href="#">Contact Us</a>
-          <br />
           <a href="#">Download</a>
-          <br />
           <a href="#">Other Apps</a>
         </div>
-      </div>
-    </div>
-  </nav>
-
-  <div class="container top">
-    <!-- CALCULATOR -->
-    <div class="container-fluid calculator-container">
-      <h1 id="calculator-top-title">
-        <span id="calculator-title-span">NEW GENERATION <br />
-          <span>CALCULATOR</span>
-        </span>
-      </h1>
-      <div class="calculator">
-        <div id="MyClockDisplay" class="clock" onload="showTime()"></div>
-        <span class="fontawesome-i">
-          <i class="fa-solid fa-signal"></i>
-          <i class="fa-solid fa-wifi"></i>
-          <i class="fa-solid fa-battery-full"></i>
-        </span>
-        <div id="buttons">
-          <input type="text" id="result" placeholder="0" />
-          <button type="button" class="button top-three" onClick="resetInput()">
-            AC
-          </button>
-          <button type="button" class="operator top-three" value="/" onClick="addSub()">
-            +/-
-          </button>
-          <button type="button" class="operator top-three" value="/" onClick="display('/100*')">
-            %
-          </button>
-          <button type="button" class="operator" value="/" onClick="display('/')">
-            &divide;
-          </button>
-
-          <button type="button" class="button" onClick="display('7')">
-            7
-          </button>
-          <button type="button" class="button" onClick="display('8')">
-            8
-          </button>
-          <button type="button" class="button" onClick="display('9')">
-            9
-          </button>
-          <button type="button" class="operator" onClick="display('*')">
-            &times;
-          </button>
-
-          <button type="button" class="button" onClick="display('4')">
-            4
-          </button>
-          <button type="button" class="button" onClick="display('5')">
-            5
-          </button>
-          <button type="button" class="button" onClick="display('6')">
-            6
-          </button>
-          <button type="button" class="operator" onClick="display('-')">
-            -
-          </button>
-
-          <button type="button" class="button" onClick="display('1')">
-            1
-          </button>
-          <button type="button" class="button" onClick="display('2')">
-            2
-          </button>
-          <button type="button" class="button" onClick="display('3')">
-            3
-          </button>
-          <button type="button" class="operator" onClick="display('+')">
-            +
-          </button>
-
-          <button type="button" class="button zero" onClick="display('0')">
-            0
-          </button>
-          <button type="button" class="button" onClick="display('.')">
-            .
-          </button>
-          <button type="button" class="equal" onClick="solve()">=</button>
-        </div>
-
-        <!-- Swipe Up completed -->
-        <div id="swipe" onClick="swipeUp()"></div>
-        <div id="swipe-completed">
-          <h3>Thanks for using my calculator❤</h3>
-          <a href="https://github.com/sirosiyasir" target="_blank" class="github"><i class="fa-brands fa-github"></i> GitHub</a>
-          <a href="https://twitter.com/sirosiyasir" target="_blank" class="twitter"><i class="fa-brands fa-twitter"></i> Twitter</a>
-          <a href="https://www.linkedin.com/in/yasir-%C3%A7e%C5%9Fmeci-7104b9250/" target="_blank" class="linkedin"><i class="fa-brands fa-linkedin"></i> Linkedin</a>
-          <h6>Yasir Çeşmeci</h6>
+        <div id="menu">
+          <p id="menu-title">MENU</p>
+          <i class="fa-solid fa-bars menu-icon" id="icon-menu"></i>
+          <!-- <i class="fa fa-caret-down"></i> -->
+          <div id="menu-links">
+            <a href="#">Contact Us</a>
+            <br />
+            <a href="#">Download</a>
+            <br />
+            <a href="#">Other Apps</a>
+          </div>
         </div>
       </div>
-    </div>
-    <!-- END OF CALCULATOR -->
+    </nav>
 
-    <div class="container my-horizon"></div>
-    <div class="container middle">
-      <div id="first-img">
-        <img class="easy-png" src="images/fast-time.png" alt="easy" />
-        <h4>EASY ACCESS</h4>
-      </div>
+    <div class="container top">
+      <!-- CALCULATOR -->
+      <div class="container-fluid calculator-container">
+        <h1 id="calculator-top-title">
+          <span id="calculator-title-span"
+            >NEW GENERATION <br />
+            <span>CALCULATOR</span>
+          </span>
+        </h1>
+        <div class="calculator">
+          <div id="MyClockDisplay" class="clock" onload="showTime()"></div>
+          <span class="fontawesome-i">
+            <i class="fa-solid fa-signal"></i>
+            <i class="fa-solid fa-wifi"></i>
+            <i class="fa-solid fa-battery-full"></i>
+          </span>
+          <div id="buttons">
+            <input type="text" id="result" placeholder="0" />
+            <button
+              type="button"
+              class="button top-three"
+              onClick="resetInput()"
+            >
+              AC
+            </button>
+            <button
+              type="button"
+              class="operator top-three"
+              value="/"
+              onClick="addSub()"
+            >
+              +/-
+            </button>
+            <button
+              type="button"
+              class="operator top-three"
+              value="/"
+              onClick="display('/100*')"
+            >
+              %
+            </button>
+            <button
+              type="button"
+              class="operator"
+              value="/"
+              onClick="display('/')"
+            >
+              &divide;
+            </button>
 
-      <div id="second-img">
-        <img class="calculator-png" src="images/tap.png" alt="stopwatch" />
-        <h4>QUICK USE</h4>
+            <button type="button" class="button" onClick="display('7')">
+              7
+            </button>
+            <button type="button" class="button" onClick="display('8')">
+              8
+            </button>
+            <button type="button" class="button" onClick="display('9')">
+              9
+            </button>
+            <button type="button" class="operator" onClick="display('*')">
+              &times;
+            </button>
+
+            <button type="button" class="button" onClick="display('4')">
+              4
+            </button>
+            <button type="button" class="button" onClick="display('5')">
+              5
+            </button>
+            <button type="button" class="button" onClick="display('6')">
+              6
+            </button>
+            <button type="button" class="operator" onClick="display('-')">
+              -
+            </button>
+
+            <button type="button" class="button" onClick="display('1')">
+              1
+            </button>
+            <button type="button" class="button" onClick="display('2')">
+              2
+            </button>
+            <button type="button" class="button" onClick="display('3')">
+              3
+            </button>
+            <button type="button" class="operator" onClick="display('+')">
+              +
+            </button>
+
+            <button type="button" class="button zero" onClick="display('0')">
+              0
+            </button>
+            <button type="button" class="button" onClick="display('.')">
+              .
+            </button>
+            <button type="button" class="equal" onClick="solve()">=</button>
+          </div>
+
+          <!-- Swipe Up completed -->
+          <div id="swipe" onClick="swipeUp()"></div>
+          <div id="swipe-completed">
+            <h3>Thanks for using my calculator❤</h3>
+            <a
+              href="https://github.com/sirosiyasir"
+              target="_blank"
+              class="github"
+              ><i class="fa-brands fa-github"></i> GitHub</a
+            >
+            <a
+              href="https://twitter.com/sirosiyasir"
+              target="_blank"
+              class="twitter"
+              ><i class="fa-brands fa-twitter"></i> Twitter</a
+            >
+            <a
+              href="https://www.linkedin.com/in/yasir-%C3%A7e%C5%9Fmeci-7104b9250/"
+              target="_blank"
+              class="linkedin"
+              ><i class="fa-brands fa-linkedin"></i> Linkedin</a
+            >
+            <h6>Yasir Çeşmeci</h6>
+          </div>
+        </div>
       </div>
-    </div>
-    <!-- NOT IN SAME DIV WITH THE OTHER IMG / CALCULATOR IMAGE -->
-    <!-- <div class="dp-block-m-a">
+      <!-- END OF CALCULATOR -->
+
+      <div class="container my-horizon"></div>
+      <div class="container middle">
+        <div id="first-img">
+          <img class="easy-png" src="images/fast-time.png" alt="easy" />
+          <h4>EASY ACCESS</h4>
+        </div>
+
+        <div id="second-img">
+          <img class="calculator-png" src="images/tap.png" alt="stopwatch" />
+          <h4>QUICK USE</h4>
+        </div>
+      </div>
+      <!-- NOT IN SAME DIV WITH THE OTHER IMG / CALCULATOR IMAGE -->
+      <!-- <div class="dp-block-m-a">
         <img src="images/calculator.png" alt="" />
         <h4>ALL CALCULATIONS</h4>
       </div> -->
-  </div>
+    </div>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-  <script src="app.js"></script>
-</body>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+  </body>
 </html>
