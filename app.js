@@ -19,10 +19,10 @@ iconMenu.onclick = () => {
   } */
 }
 
-$(window).resize(function () {
+/* $(window).resize(function () {
   if (window.innerWidth <= 575) {
     mobileNavbar.style.display = "none"
-  }
+  } */
 })
 
 /* CALCULATOR */
