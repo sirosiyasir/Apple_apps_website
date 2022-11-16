@@ -1,3 +1,6 @@
+/* GOOGLE FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+
 body {
   background-color: #fff;
 }
@@ -13,8 +16,6 @@ hr {
 }
 
 /* CLASS */
-
-/* .dp-block-m-a h4, */
 .calculator-png,
 .easy-png {
   padding-block: 40px;
@@ -27,13 +28,6 @@ hr {
 .calculator-png {
   margin-right: 40px;
 }
-
-/* .dp-block-m-a {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-} */
 
 .middle {
   /* display: flex;
@@ -61,14 +55,7 @@ hr {
   text-align: center;
 }
 
-.mobile-navbar .mobile-links {
-  position: relative;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.mobile-navbar .mobile-links a {
+.mobile-navbar a {
   font-size: 1.5rem;
   display: block;
   margin-left: auto;
@@ -77,7 +64,7 @@ hr {
   text-shadow: 0 0 8px #fff;
 }
 
-.mobile-navbar .mobile-links a:nth-of-type(1) {
+.mobile-navbar a:nth-of-type(1) {
   margin-top: 10px;
 }
 
@@ -95,7 +82,7 @@ hr {
 }
 
 .top {
-  height: 100vh;
+  /* height: 100vh; */
   margin-top: 0.5rem;
   background-color: #fff;
   border-radius: 1.5rem;
@@ -260,10 +247,6 @@ h6 {
   padding: 0;
 }
 
-.buttons-row {
-  line-height: 12px;
-}
-
 .calculator {
   /* position: absolute;
   left: 10rem; */
@@ -391,10 +374,6 @@ h6 {
     text-align: center;
     margin-bottom: 3rem;
   }
-
-  /* .top {
-    height: 110vh;
-  } */
 }
 
 @media screen and (max-width: 767px) {
