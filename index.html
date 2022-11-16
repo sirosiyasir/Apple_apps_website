@@ -15,11 +15,6 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="style.css" />
-    <!-- GOOGLE FONTS -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
     <!-- FONTAWESOME -->
     <script
       src="https://kit.fontawesome.com/ff84dc085c.js"
@@ -30,13 +25,11 @@
   <body>
     <!-- MOBİLE NAVBAR MENU ACTİVE -->
     <div class="container mobile-navbar" id="mobile-navbar">
-      <div class="mobile-links">
-        <a href="#">Contact Us</a>
-        <hr />
-        <a href="#">Download</a>
-        <hr />
-        <a href="#">Other Apps</a>
-      </div>
+      <a href="#">Contact Us</a>
+      <hr />
+      <a href="#">Download</a>
+      <hr />
+      <a href="#">Other Apps</a>
     </div>
     <!-- NAVBAR -->
     <nav class="navigation container">
@@ -87,28 +80,17 @@
             >
               AC
             </button>
-            <button
-              type="button"
-              class="operator top-three"
-              value="/"
-              onClick="addSub()"
-            >
+            <button type="button" class="operator top-three" onClick="addSub()">
               +/-
             </button>
             <button
               type="button"
               class="operator top-three"
-              value="/"
               onClick="display('/100*')"
             >
               %
             </button>
-            <button
-              type="button"
-              class="operator"
-              value="/"
-              onClick="display('/')"
-            >
+            <button type="button" class="operator" onClick="display('/')">
               &divide;
             </button>
 
@@ -189,6 +171,7 @@
       <!-- END OF CALCULATOR -->
 
       <div class="container my-horizon"></div>
+
       <div class="container middle">
         <div id="first-img">
           <img class="easy-png" src="images/fast-time.png" alt="easy" />
@@ -200,13 +183,9 @@
           <h4>QUICK USE</h4>
         </div>
       </div>
-      <!-- NOT IN SAME DIV WITH THE OTHER IMG / CALCULATOR IMAGE -->
-      <!-- <div class="dp-block-m-a">
-        <img src="images/calculator.png" alt="" />
-        <h4>ALL CALCULATIONS</h4>
-      </div> -->
     </div>
 
+    <div class="container my-horizon"></div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="app.js"></script>
   </body>
