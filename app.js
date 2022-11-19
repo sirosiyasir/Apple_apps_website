@@ -19,6 +19,7 @@ iconMenu.onclick = () => {
   } */
 }
 
+/* MOBİLE NAVBAR'I RESPONSİVE YAPMAK İSTİYORSAK BUNU KULLANMALIYIZ */
 $(window).resize(function () {
   if (window.innerWidth <= 575) {
     mobileNavbar.style.display = "none"
@@ -165,3 +166,12 @@ function showTime() {
   setTimeout(showTime, 100)
 }
 showTime()
+
+/* ScrollY animation */
+function myFunction() {
+  let scrolly = window.scrollY
+  document.getElementById("calculatorid").style.transform =
+    "rotate(" + scrolly / 30 + "deg)"
+  setTimeout(myFunction, 10)
+}
+myFunction()
