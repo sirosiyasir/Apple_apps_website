@@ -23,6 +23,10 @@ iconMenu.onclick = () => {
 $(window).resize(function () {
   if (window.innerWidth <= 575) {
     mobileNavbar.style.display = "none"
+    /* Mobilde hesap makinesinin dönmemesi için id'yi kaldırdım (mobilde dönüş güzel olmadığı için kaldırdım) */
+    document.querySelector(".calculator").removeAttribute("id")
+  } else {
+    document.querySelector(".calculator").setAttribute("id", "calculatorid")
   }
 })
 
@@ -168,10 +172,10 @@ function showTime() {
 showTime()
 
 /* ScrollY animation */
-function myFunction() {
+function scrollAnimation() {
   let scrolly = window.scrollY
   document.getElementById("calculatorid").style.transform =
-    "rotate(" + scrolly / 30 + "deg)"
-  setTimeout(myFunction, 10)
+    "rotate(" + scrolly / 1.5 + "deg)"
+  setTimeout(scrollAnimation, 10)
 }
-myFunction()
+scrollAnimation()
