@@ -61,11 +61,14 @@ function swipeUp() {
   $("#buttons").slideToggle()
 
   var x = document.getElementById("swipe-completed")
-  if (x.style.display === "block") {
-    x.style.display = "none"
-  } else {
-    x.style.display = "block"
-  }
+  /* setTimeout olmayınca swipe-completed id'sinin içindekiler aşağıdan yukarıya gelirken altlarındaki öğeleri kaydırıyor */
+  setTimeout(() => {
+    if (x.style.display === "block") {
+      x.style.display = "none"
+    } else {
+      x.style.display = "block"
+    }
+  }, 250)
 }
 
 /* SWIPE UP REMINDER */
