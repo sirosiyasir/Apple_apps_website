@@ -15,6 +15,11 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="style.css" />
+    <!-- GOOGLE FONTS -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
     <!-- FONTAWESOME -->
     <script
       src="https://kit.fontawesome.com/ff84dc085c.js"
@@ -25,31 +30,43 @@
   <body>
     <!-- MOBİLE NAVBAR MENU ACTİVE -->
     <div class="container mobile-navbar" id="mobile-navbar">
-      <a href="#">Contact Us</a>
-      <hr />
-      <a href="#">Download</a>
-      <hr />
-      <a href="#">Other Apps</a>
+      <div class="mobile-links">
+        <a href="https://peaceful-sierra-60791.herokuapp.com/" target="_blank"
+          >Contact Us</a
+        >
+        <hr />
+        <a href="#">Download</a>
+        <hr />
+        <a href="https://github.com/sirosiyasir" target="_blank">More Apps</a>
+      </div>
     </div>
     <!-- NAVBAR -->
     <nav class="navigation container">
-      <h1 id="brand">Calculator</h1>
+      <h1 id="brand">Sirosi</h1>
       <div id="all-links">
         <div id="links">
-          <a href="#">Contact Us</a>
+          <a href="https://peaceful-sierra-60791.herokuapp.com/" target="_blank"
+            >Contact Us</a
+          >
           <a href="#">Download</a>
-          <a href="#">Other Apps</a>
+          <a href="https://github.com/sirosiyasir" target="_blank">More Apps</a>
         </div>
         <div id="menu">
           <p id="menu-title">MENU</p>
           <i class="fa-solid fa-bars menu-icon" id="icon-menu"></i>
           <!-- <i class="fa fa-caret-down"></i> -->
           <div id="menu-links">
-            <a href="#">Contact Us</a>
+            <a
+              href="https://peaceful-sierra-60791.herokuapp.com/"
+              target="_blank"
+              >Contact Us</a
+            >
             <br />
             <a href="#">Download</a>
             <br />
-            <a href="#">Other Apps</a>
+            <a href="https://github.com/sirosiyasir" target="_blank"
+              >More Apps</a
+            >
           </div>
         </div>
       </div>
@@ -59,13 +76,13 @@
       <!-- CALCULATOR -->
       <div class="container-fluid calculator-container">
         <h1 id="calculator-top-title">
-          <span id="calculator-title-span"
-            >NEW GENERATION <br />
+          <span id="calculator-title-span">
+            NEW GENERATION <br />
             <span>CALCULATOR</span>
           </span>
         </h1>
         <div class="calculator" id="calculatorid">
-          <div id="MyClockDisplay" class="clock" onload="showTime()"></div>
+          <div id="myClockDisplay" class="clock" onload="showTime()"></div>
           <span class="fontawesome-i">
             <i class="fa-solid fa-signal"></i>
             <i class="fa-solid fa-wifi"></i>
@@ -80,17 +97,28 @@
             >
               AC
             </button>
-            <button type="button" class="operator top-three" onClick="addSub()">
+            <button
+              type="button"
+              class="operator top-three"
+              value="/"
+              onClick="addSub()"
+            >
               +/-
             </button>
             <button
               type="button"
               class="operator top-three"
+              value="/"
               onClick="display('/100*')"
             >
               %
             </button>
-            <button type="button" class="operator" onClick="display('/')">
+            <button
+              type="button"
+              class="operator"
+              value="/"
+              onClick="display('/')"
+            >
               &divide;
             </button>
 
@@ -184,9 +212,52 @@
         </div>
       </div>
       <div class="container my-horizon"></div>
+
+      <!-- TO DO APP -->
+      <div class="container-fluid all-to-do">
+        <span id="todo-title-span"
+          >NEW GENERATION <br />
+          <span>TO DO LIST</span>
+        </span>
+        <div class="todophone">
+          <div id="toDoAppClock" class="clock" onload="showTime()"></div>
+          <span id="to-do-i-span">
+            <i class="fa-solid fa-signal"></i>
+            <i class="fa-solid fa-wifi"></i>
+            <i class="fa-solid fa-battery-full"></i>
+          </span>
+          <div class="todo">
+            <h1 id="to-do-h1">TO DO LIST</h1>
+            <input id="to-do-input" type="text" maxlength="73" />
+            <button id="sendButton" type="button">Send</button>
+            <button id="clearButton">Clear</button>
+            <form action="">
+              <!-- <ul><li></li></ul> -->
+            </form>
+          </div>
+
+          <!-- Swipe Up completed -->
+          <div id="to-do-swipe" onClick="toDoSwipeUp()"></div>
+          <div id="to-do-swipe-completed">
+            <h3>Thanks for using my to do app❤</h3>
+            <a href="https://github.com/sirosiyasir" class="github"
+              ><i class="fa-brands fa-github"></i> GitHub</a
+            >
+            <a href="https://twitter.com/sirosiyasir" class="twitter"
+              ><i class="fa-brands fa-twitter"></i> Twitter</a
+            >
+            <a
+              href="https://www.linkedin.com/in/yasir-%C3%A7e%C5%9Fmeci-7104b9250/"
+              class="linkedin"
+              ><i class="fa-brands fa-linkedin"></i> LinkedIn</a
+            >
+            <h6>Yasir Çeşmeci</h6>
+          </div>
+        </div>
+      </div>
+      <!-- END OF TO DO APP -->
     </div>
 
-    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="app.js"></script>
   </body>
