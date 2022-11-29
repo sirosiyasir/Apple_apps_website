@@ -279,12 +279,18 @@ h6 {
   font-size: 5rem;
   font-weight: bold;
   line-height: 1.5;
-  color: #000;
+  color: #fff;
 }
 
-.calculator-container h1 #calculator-title-span span {
+/* Calculator Title Color Animation */
+.calculator-title-animation {
+  color: rgba(0, 0, 0);
+}
+
+.calculator-text-animation {
   color: rgb(190, 126, 66);
 }
+/* End of animation */
 
 .operator,
 .equal {
@@ -321,6 +327,18 @@ h6 {
   padding-right: 6rem;
 }
 
+/* CALCULATOR TEXT ANIMATION */
+#word1, #word2, #word3, #word4, #word5, #word6,
+#word7, #word8, #word9, #word10, #word11, #word12,
+#word13,
+.calculator-container h1 #calculator-title-span #calculator-text {
+  /* color: rgb(190, 126, 66); */
+  -webkit-transition: all 1.3s ease-in-out;
+  -moz-transition: all 1.3s ease-in-out;
+  -o-transition: all 1.3s ease-in-out;
+  -ms-transition: all 1.3s ease-in-out;
+  transition: all 1.3s ease-in-out;
+}
 /* END OFF CALCULATOR */
 
 /* TO DO APP */
