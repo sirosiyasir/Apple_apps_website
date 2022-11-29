@@ -21,10 +21,9 @@ iconMenu.onclick = () => {
     mobileNavbar.style.display = "none"
   } */
 }
+
 /* MOBİLE NAVBAR'I RESPONSİVE YAPMAK İSTİYORSAK BUNU KULLANMALIYIZ */
-window.addEventListener(
-  "resize",
-  function (event) {
+window.addEventListener("resize",function (event) {
     if (window.innerWidth <= 575) {
       mobileNavbar.style.display = "none"
       /* Mobilde hesap makinesinin dönmemesi için id'yi kaldırdım (mobilde dönüş güzel olmadığı için kaldırdım) */
@@ -193,11 +192,12 @@ function scrollAnimation() {
   const calculatorPhone = document.getElementById("calculatorid")
 
   let scrolly = window.scrollY
+  
   calculatorPhone.style.transform = "rotate(" + scrolly / 1.5 + "deg)"
   setTimeout(scrollAnimation, 10)
 }
 scrollAnimation()
-/* console.log(scrolly) */
+
 /* TO DO APP */
 /* VANILLA JAVASCRIPT */
 const form = document.querySelector("form")
@@ -471,3 +471,87 @@ function handleTouchMove(evt) {
 }
 
 /* END OF TO DO APP */
+
+/* Title Animation */
+
+for (let index = 1; index < 14; index++) {
+  let word = document.querySelector("#word" + [index])
+  setTimeout(() => {
+    word.classList.toggle ("calculator-title-animation")
+    console.log(index);
+  }, index * 120);
+}
+
+const titleCalculatorWord = document.querySelector("#calculator-text")
+setTimeout(() => {
+  titleCalculatorWord.classList.add("calculator-text-animation")
+}, 1400);
+
+
+// loop'u kullanmadan önce title animation'u bununla çalıştırmıştım
+/* const firstWord = document.getElementById("firstWord")
+const secondWord = document.getElementById("secondWord")
+const thirdWord = document.getElementById("thirdWord")
+const fourthWord = document.getElementById("fourthWord")
+const fifthWord = document.getElementById("fifthWord")
+const sixthWord = document.getElementById("sixthWord")
+const seventhWord = document.getElementById("seventhWord")
+const eigthWord = document.getElementById("eigthWord")
+const ninthWord = document.getElementById("ninthWord")
+const tenWord = document.getElementById("tenWord")
+const elevenWord = document.getElementById("elevenWord")
+const twelfWord = document.getElementById("twelfWord")
+const thirteenWord = document.getElementById("thirteenWord")
+
+setTimeout(() => {
+  firstWord.classList.toggle ("calculator-title-animation")
+}, 750);
+
+setTimeout(() => {
+  secondWord.classList.toggle ("calculator-title-animation")
+}, 800);
+
+setTimeout(() => {
+  thirdWord.classList.toggle ("calculator-title-animation")
+}, 850);
+
+setTimeout(() => {
+  fourthWord.classList.toggle ("calculator-title-animation")
+}, 900);
+
+setTimeout(() => {
+  fifthWord.classList.toggle ("calculator-title-animation")
+}, 950);
+
+setTimeout(() => {
+  sixthWord.classList.toggle ("calculator-title-animation")
+}, 1000);
+
+setTimeout(() => {
+  seventhWord.classList.toggle ("calculator-title-animation")
+}, 1050);
+
+setTimeout(() => {
+  eigthWord.classList.toggle ("calculator-title-animation")
+}, 1100);
+
+setTimeout(() => {
+  ninthWord.classList.toggle ("calculator-title-animation")
+}, 1150);
+
+setTimeout(() => {
+  tenWord.classList.toggle ("calculator-title-animation")
+}, 1200);
+
+setTimeout(() => {
+  elevenWord.classList.toggle ("calculator-title-animation")
+}, 1250);
+
+setTimeout(() => {
+  twelfWord.classList.toggle ("calculator-title-animation")
+}, 1300);
+
+setTimeout(() => {
+  thirteenWord.classList.toggle ("calculator-title-animation")
+}, 1350);
+ */
